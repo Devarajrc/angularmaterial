@@ -1,6 +1,6 @@
 import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/observable';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material';
@@ -25,8 +25,8 @@ export class SidenavComponent implements OnInit {
     zone: NgZone, 
     private userService: UserService,
     private router: Router) {
-    this.mediaMatcher.addListener(mql =>
-      zone.run(() => this.mediaMatcher = mql));
+//this.mediaMatcher.addListener(mql =>
+  //    zone.run(() => this.mediaMatcher = mql));
   }
 
   @ViewChild(MatSidenav) sidenav: MatSidenav;
